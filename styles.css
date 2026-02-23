@@ -1,12 +1,140 @@
+/*font*/
+/* .roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+
+/* Reset default spacing */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 80px;
-  background-color: #f4f4f4;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
+/* Full header */
+header {
+  background: rgb(241, 224, 221);
+  border-bottom: 3px solid rgb(182, 126, 116);
+}
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* pushes name left, links right */
+  align-items: center;
+  padding: 18px 40px;
+}
+
+/* Name on the left */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Link styling */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* Animated underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #892a2a;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover{
+  color: #892a2a;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+
+/* Container */
+.hero-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Make image fill screen width */
+.hero-image img {
+  width: 100%;
+  height: 500px;        /* adjust height as you like */
+  object-fit: cover;    /*prevents stretching*/
+  display: block;
+}
+
+/* Overlay (initially hidden) */
+.overlay {
+  position: absolute;
+  inset: 0;             /* shorthand for top/right/bottom/left = 0 */
+  background: rgba(149, 134, 134, 0.55);  /* semi-transparent black */
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.hero-image:hover .overlay {
+  opacity: 1;
+}
+
+/* Text styling */
+.overlay-text {
+  color: white;
+  font-size: 70px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+
+
+
 h1 {
-  color: #2c3e50;
+  color: #000000;
+}
+
+/*portfolio*/
+/* section30{ */
+  /* text-align: left;
+  margin-left: 240px; */
+  /* background-color: ; */
+/* } */
+
+/*personal*/
+article{
+  text-align: right;
+  margin-right: 240px;
 }
 
 button {
